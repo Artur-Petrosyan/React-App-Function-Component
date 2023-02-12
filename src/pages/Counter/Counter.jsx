@@ -13,7 +13,7 @@ const decrement = () => {
         <div>
             <Button className={styles.btn} onClick={increment}>INCREMENT</Button>
             <Button className={styles.btn} onClick={decrement}>DECREMENT</Button>
-            <h2 >{count}</h2>
+            <h2 className={styles.h2}>{count}</h2>
         </div>
     )
 
