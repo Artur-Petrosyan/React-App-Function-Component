@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Button from "../../ui-kit/Button/Button"
-
+import styles from "./Counter.module.scss"
 const Counter = () => {
 const [count,setCount] = useState(0)
 const increment = () => {
@@ -10,11 +10,11 @@ const decrement = () => {
     setCount(count - 1)
 }
     return (
-        <>
-            <Button onClick={increment}>INCREMENT</Button>
-            <Button onClick={decrement}>DECREMENT</Button>
-            <h2>{count}</h2>
-        </>
+        <div>
+            <Button className={styles.btn} onClick={increment}>INCREMENT</Button>
+            <Button className={styles.btn} onClick={decrement}>DECREMENT</Button>
+            <h2 >{count}</h2>
+        </div>
     )
 
 }
