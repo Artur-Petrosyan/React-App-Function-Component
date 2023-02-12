@@ -2,7 +2,7 @@ import styles from "./Header.module.scss"
 import Navigation from "./Navigation/Navigation"
 
 
-export const Header = () => {
+const Header = () => {
 return(
     <div className={styles.container}>
        <Navigation />
@@ -10,3 +10,4 @@ return(
 )
 }
 
+export default Header;
