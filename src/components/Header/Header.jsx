@@ -1,9 +1,11 @@
+import { useEffect, useRef } from "react"
 import styles from "./Header.module.scss"
 import Navigation from "./Navigation/Navigation"
 
 
 const Header = () => {
-return(
+
+    return(
     <div className={styles.container}>
        <Navigation />
     </div>

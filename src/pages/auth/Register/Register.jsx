@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../../../ui-kit/Button/Button";
 import Input from "../../../ui-kit/Input/Input";
 import styles from "./Register.module.scss"
@@ -6,6 +6,7 @@ const Register = () => {
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
     const [data, setData] = useState([])
+    
     const onChangeLogin = (event) => {
         setLogin(event.target.value)
     }
@@ -20,7 +21,7 @@ const Register = () => {
     localStorage.setItem("user", user)
 
     return (
-        <div className={styles.container}>
+        <div ref={divRef} className={styles.container}>
             <div className={styles.content}>
                 <Input name='login'
                     className={styles.input}
