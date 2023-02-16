@@ -12,9 +12,9 @@ const Register = () => {
     const onChangePassword = (event) => {
         setPassword(event.target.value)
     }
-    
+
     const onSubmit = () => {
-    setData([...data,{ userName: login, userPassword: password }])
+        setData([...data, { userName: login, userPassword: password }])
     }
     const user = JSON.stringify(data)
     localStorage.setItem("user", user)
